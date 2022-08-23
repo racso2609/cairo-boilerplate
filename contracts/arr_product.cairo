@@ -1,4 +1,5 @@
-%builtins output
+# %builtins output
+
 from starkware.cairo.common.serialize import serialize_word
 from starkware.cairo.common.alloc import alloc
 
