@@ -45,8 +45,12 @@ function compile_folder(){
 file_or_folder_result="$(is_folder_or_file $FOLDER_OR_FILE_PATH)"
 
 if [[ $file_or_folder_result == 'file' ]]; then
-  FILENAME=$(get_filename $FOLDER_OR_FILE_PATH)
-  EXTENSION=$(get_extension $FOLDER_OR_FILE_PATH)
+  FILE=${FOLDER_OR_FILE_PATH##*/}
+
+  FILENAME=$(get_filename $FILE)
+  EXTENSION=$(get_extension $FILE)
+
+
   if [[ $EXTENSION == 'cairo' ]];then
   compile_file $FOLDER_OR_FILE_PATH "compiled/$FILENAME.json"
   fi

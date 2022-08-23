@@ -14,21 +14,20 @@ func arr_prod(arr : felt*, size) -> (sum : felt):
     return (sum=[arr] * sum_of_rest)
 end
 
-
-
 func main{output_ptr : felt*}():
     const ARRAY_SIZE = 3
 
     # Allocate an array.
-    let (num_array) = alloc()
+    # let (num_array) = alloc()
 
     # Populate some values in the array.
-    assert [num_array] = 2
-    assert [num_array + 1] = 2
-    assert [num_array + 2] = 2
-    let (sum) = arr_prod(num_array,ARRAY_SIZE)
-    serialize_word(sum)
+    # assert [num_array] = 2
+    # assert [num_array + 1] = 2
+    # assert [num_array + 2] = 2
+    # let (sum) = arr_prod(num_array, ARRAY_SIZE)
+    # serialize_word(sum)
+    serialize_word(6 / 3)
+    serialize_word(7 / 3)
 
-return ()
+    return ()
 end
-
